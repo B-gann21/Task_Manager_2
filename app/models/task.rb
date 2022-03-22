@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
   def laundry?
-    title == 'laundry' || description == 'laundry'
+    title.include?('laundry') || description == 'laundry'
   end
 end
