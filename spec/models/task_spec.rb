@@ -39,8 +39,10 @@ RSpec.describe Task, type: :model do
         expect(task.laundry?).to be(true)
       end
 
-      xit 'is case insensitive when checking if the description contains the word laundry' do
+      it 'is case insensitive when checking if the description contains the word laundry' do
+        task = Task.create!(title: 'Stinky clothes', description: 'gOtTa dO lAuNdRy')
 
+        expect(task.laundry?).to be(true)
       end
     end
   end
